@@ -30,6 +30,7 @@
 using System;
 using System.Diagnostics;
 using tainicom.Aether.Physics2D.Common;
+using tainicom.Aether.Physics2D.Common.Maths;
 using tainicom.Aether.Physics2D.Dynamics.Contacts;
 using tainicom.Aether.Physics2D.Dynamics.Joints;
 #if XNAAPI

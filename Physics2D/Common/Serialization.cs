@@ -11,6 +11,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using tainicom.Aether.Physics2D.Collision.Shapes;
+using tainicom.Aether.Physics2D.Common.Maths;
 using tainicom.Aether.Physics2D.Dynamics;
 using tainicom.Aether.Physics2D.Dynamics.Joints;
 #if XNAAPI
