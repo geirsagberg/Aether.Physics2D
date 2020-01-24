@@ -180,6 +180,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
             Gravity = gravity;
         }
 
+#if XNAAPI
         /// <summary>
         /// Initializes a new instance of the <see cref="World"/> class.
         /// </summary>
@@ -187,6 +188,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
         public World(AABB span) : this(new QuadTreeBroadPhase(span))
         {
         }
+#endif
 
         /// <summary>
         /// Initializes a new instance of the <see cref="World"/> class.
@@ -883,12 +885,14 @@ namespace tainicom.Aether.Physics2D.Dynamics
         /// </summary>        
         public bool IsLocked { get; private set; }
 
+#if XNAAPI
         /// <summary>
         /// Is the world running (in the middle of a time step).
         /// </summary>        
         /// <remarks>Deprecated in version 1.3</remarks>
         [Obsolete("Use IsLocked")]
         public bool IsStepping { get { return IsLocked; } }
+#endif
 
         /// <summary>
         /// Get the contact manager for testing.
@@ -1530,6 +1534,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
             _queryAABBCallback = null;
         }
 
+#if XNAAPI
         /// <summary>
         /// Query the world for all fixtures that potentially overlap the provided AABB.
         /// Use the overload with a callback for filtering and better performance.
@@ -1549,6 +1554,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
 
             return affected;
         }
+#endif
 
         /// <summary>
         /// Ray-cast the world for all fixtures in the path of the ray. Your callback
@@ -1576,6 +1582,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
             _rayCastCallback = null;
         }
 
+#if XNAAPI
         /// <summary>
         /// Ray-cast the world for all fixtures in the path of the ray.
         /// Use the overload with a callback for filtering and better performance.
@@ -1595,6 +1602,7 @@ namespace tainicom.Aether.Physics2D.Dynamics
 
             return affected;
         }
+#endif
 
         /// <summary>
         /// Warning: This method is locked during callbacks.
